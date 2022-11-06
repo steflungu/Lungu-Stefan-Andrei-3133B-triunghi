@@ -10,12 +10,12 @@ using OpenTK.Input;
 using OpenTK.Platform;
 
 
-namespace Lungu_Stefan_Andrei_triunghi
+namespace Lungu_Stefan_Andrei_triunghi // !!! Am modificat figura geometrica din triunghi in romb dar nu am mai schimbat numele proiectului!!!
 {
     class SimpleWindow : GameWindow
     {
-        List<List<float>> coord = new List<List<float>>();
-        List<Color> colors = new List<Color>();
+        List<List<float>> coord = new List<List<float>>(); //implementare lista de coordonate pentru citirea din fisier a coordonatelor
+        List<Color> colors = new List<Color>(); //implementare lista de culori
 
         public SimpleWindow() : base(800, 600)
         {
@@ -24,6 +24,7 @@ namespace Lungu_Stefan_Andrei_triunghi
             Console.WriteLine(" S - muta jos");
             Console.WriteLine(" A - muta dreapta");
             Console.WriteLine(" D - muta stanga");
+            Console.WriteLine(" C - modificare culori");
             Console.WriteLine(" Click dreapta mouse - rotatie clockwise");
             Console.WriteLine(" Click stanga mouse - rotatie counter-clockwise");
 
@@ -31,7 +32,7 @@ namespace Lungu_Stefan_Andrei_triunghi
             setColors();
         }
 
-        //functie ce genereaza culori random, din interval RGB
+        //functie ce genereaza culori , din interval RGB
         void setColors()
         {
             var rnd = new Random();
@@ -119,7 +120,7 @@ namespace Lungu_Stefan_Andrei_triunghi
         }
         public List<List<float>> GetCoordonate()
         {
-            //O lista de float-uri reprezinta coordonatele unui vertex
+            //O lista de float-uri pentru vertex
             //Coordonatele sunt cate 3 pe un rand, delimitate prin ","
 
             List<List<float>> list = new List<List<float>>();
